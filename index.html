@@ -17,17 +17,17 @@
         }
         .ribbon {
             position: absolute;
-            top: 0;
+            top: 10%;
             left: 50%;
             transform: translateX(-50%);
-            width: 100%;
-            height: 80px;
-            background: #ff1493;
-            clip-path: polygon(0% 0%, 100% 0%, 90% 100%, 10% 100%);
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            width: 120px;
+            height: auto;
             animation: floatRibbon 3s ease-in-out infinite;
         }
-       @keyframes floatRibbon {
+        .ribbon img {
+            width: 100%;
+        }
+        @keyframes floatRibbon {
             0%, 100% { transform: translateX(-50%) translateY(0); }
             50% { transform: translateX(-50%) translateY(10px); }
         }
@@ -69,8 +69,10 @@
     </style>
 </head>
 <body>
-    <div class="ribbon"></div>
-    <h1>Haii! Web ini dibuat spesial untukmu, ayo eksplor!</h1>
+    <div class="ribbon">
+        <img src="https://cdn-icons-png.flaticon.com/512/10517/10517424.png" alt="Pita">
+    </div>
+    <h1>Hai! Web ini dibuat spesial untukmu, ayo eksplor!</h1>
     <img src="https://cdn-icons-png.flaticon.com/512/414/414927.png" class="computer" alt="Komputer">
     <img src="https://cdn-icons-png.flaticon.com/512/414/414927.png" class="cloud" style="left: 10%;" alt="Awan">
     <img src="https://cdn-icons-png.flaticon.com/512/414/414927.png" class="cloud" style="left: 40%;" alt="Awan">
