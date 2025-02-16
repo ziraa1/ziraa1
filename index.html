@@ -41,14 +41,16 @@
             padding: 10px 20px;
             background: rgba(255, 255, 255, 0.6);
             border-radius: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
             animation: floatText 3s ease-in-out infinite;
         }
         @keyframes floatText {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-10px); }
         }
-       
+        .cloud {
+            position: absolute;
+            width: 100px;
+            animation: moveClouds 15s linear infinite;
         }
         .cloud:nth-child(2) { top: 10%; left: 10%; animation-duration: 18s; }
         .cloud:nth-child(3) { top: 50%; left: 50%; animation-duration: 22s; }
@@ -57,16 +59,6 @@
         @keyframes moveClouds {
             0% { transform: translateX(-150px); opacity: 1; }
             100% { transform: translateX(100vw); opacity: 0; }
-        }
-        .computer {
-            position: absolute;
-            bottom: 10%;
-            width: 150px;
-            animation: floatComputer 3s ease-in-out infinite;
-        }
-        @keyframes floatComputer {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
         }
     </style>
 </head>
@@ -82,7 +74,6 @@
     </div>
     <h1>Hallo! Web ini dibuat spesial untukmu, ayo eksplor!</h1>
     <img src="https://png.pngtree.com/png-clipart/20220502/original/pngtree-awan-biru-png-png-image_7635012.png" class="cloud" style="left: 10%;" alt="Awan">
-    
     <img src="https://png.pngtree.com/png-clipart/20220502/original/pngtree-awan-biru-png-png-image_7635012.png" class="cloud" style="top: 50%; left: 50%;" alt="Awan">
     <img src="https://png.pngtree.com/png-clipart/20220502/original/pngtree-awan-biru-png-png-image_7635012.png" class="cloud" style="bottom: 10%; left: 30%;" alt="Awan">
 </body>
