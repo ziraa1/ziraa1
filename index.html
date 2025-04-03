@@ -87,6 +87,47 @@
         .file-upload button:hover {
             background: #99004d;
         }
+
+        /* === ANIMASI PITA === */
+        .ribbon {
+            position: absolute;
+            top: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(45deg, #ff66b2, #ff3366);
+            padding: 8px 20px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+            border-radius: 10px;
+            animation: ribbonAnimation 4s ease-in-out infinite;
+        }
+
+        @keyframes ribbonAnimation {
+            0% { transform: translateX(-50%) rotate(0deg); }
+            50% { transform: translateX(-50%) rotate(5deg); }
+            100% { transform: translateX(-50%) rotate(0deg); }
+        }
+
+        /* === ANIMASI AWAN === */
+        .clouds {
+            position: absolute;
+            top: 25%;
+            left: -15%;
+            z-index: -1;
+            animation: moveClouds 15s linear infinite;
+        }
+
+        .clouds img {
+            width: 200px;
+            height: auto;
+            margin: 0 20px;
+        }
+
+        @keyframes moveClouds {
+            0% { left: -20%; }
+            100% { left: 100%; }
+        }
     </style>
 </head>
 <body>
@@ -99,6 +140,9 @@
         <a href="#">Contact</a>
     </div>
 
+    <!-- PITA ANIMASI -->
+    <div class="ribbon">Selamat Datang di Website Zira!</div>
+
     <!-- JUDUL -->
     <h1>Hallo! Web ini dibuat spesial untukmu, ayo eksplor!</h1>
 
@@ -107,6 +151,13 @@
         <h3>Upload File Kamu</h3>
         <input type="file">
         <button>Upload</button>
+    </div>
+
+    <!-- ANIMASI AWAN -->
+    <div class="clouds">
+        <img src="https://www.transparenttextures.com/patterns/clouds.png" alt="Clouds">
+        <img src="https://www.transparenttextures.com/patterns/clouds.png" alt="Clouds">
+        <img src="https://www.transparenttextures.com/patterns/clouds.png" alt="Clouds">
     </div>
 
 </body>
