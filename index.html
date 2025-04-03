@@ -3,105 +3,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website zira</title>
+    <title>Website Zira</title>
     <style>
         body {
             margin: 0;
             height: 100vh;
             display: flex;
-            justify-content: center;
-            align-items: center;
             flex-direction: column;
-            overflow: hidden;
+            align-items: center;
+            overflow-x: hidden;
             background: url('https://png.pngtree.com/background/20210716/original/pngtree-soft-pink-pastel-ink-background-picture-image_1344872.jpg') no-repeat center center/cover;
             position: relative;
+            scroll-behavior: smooth;
         }
-        nav {
-            position: absolute;
-            top: 0;
+        
+        /* Menu Navigasi */
+        .navbar {
             width: 100%;
-            background: rgba(255, 255, 255, 0.7);
+            background-color: rgba(255, 182, 193, 0.8);
             padding: 10px 0;
+            position: fixed;
+            top: 0;
+            left: 0;
             text-align: center;
+            z-index: 1000;
         }
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
+
+        .navbar a {
             color: #660033;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 0 15px;
             font-weight: bold;
+            padding: 8px;
         }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        /* Bagian Home */
+        .section {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .section#home {
+            margin-top: 50px;
+        }
+
+        h1 {
+            color: #660033;
+            font-family: Arial, sans-serif;
+            font-size: 2rem;
+            animation: floatText 3s ease-in-out infinite;
+        }
+
+        @keyframes floatText {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Gaya pita */
         .ribbon {
             position: absolute;
             width: 120px;
             height: auto;
             animation: floatRibbon 3s ease-in-out infinite;
         }
+
         .ribbon img {
             width: 100%;
         }
+
         .ribbon:nth-child(1) { top: 10%; left: 10%; animation-duration: 4s; }
         .ribbon:nth-child(2) { top: 30%; left: 45%; animation-duration: 5s; }
         .ribbon:nth-child(3) { top: 50%; left: 80%; animation-duration: 6s; }
-        .ribbon:nth-child(4) { top: 70%; left: 20%; animation-duration: 5s; }
+        .ribbon:nth-child(4) { top: 20%; left: 65%; animation-duration: 4.5s; }
 
         @keyframes floatRibbon {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(10px); }
         }
-        h1 {
-            color: #660033;
-            font-family: Arial, sans-serif;
-            font-size: 2rem;
-            position: absolute;
-            top: 20%;
-            animation: floatText 3s ease-in-out infinite;
-            text-shadow: none;
-        }
-        @keyframes floatText {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
+
+        /* Gaya awan */
         .cloud {
             position: absolute;
             width: 100px;
             animation: moveClouds 15s linear infinite;
         }
-        .cloud:nth-child(2) { top: 10%; left: 10%; animation-duration: 18s; }
-        .cloud:nth-child(3) { top: 55%; left: 55%; animation-duration: 18s; }
-        .cloud:nth-child(4) { bottom: 5%; left: 70%; animation-duration: 18s; }
-        
+
+        .cloud:nth-child(5) { top: 10%; left: 10%; animation-duration: 18s; }
+        .cloud:nth-child(6) { top: 55%; left: 55%; animation-duration: 18s; }
+        .cloud:nth-child(7) { bottom: 5%; left: 70%; animation-duration: 18s; }
+
         @keyframes moveClouds {
             0% { transform: translateX(-150px); opacity: 1; }
             100% { transform: translateX(100vw); opacity: 0; }
         }
+
+        /* Gaya Contact */
+        .contact {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 10px 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .contact p {
+            margin: 5px 0;
+        }
+
+        .contact a {
+            text-decoration: none;
+            color: #660033;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
-    <nav>
+
+    <!-- Menu Navigasi -->
+    <div class="navbar">
         <a href="#home">Home</a>
         <a href="#contact">Contact</a>
         <a href="#tugas">Tugas</a>
-    </nav>
-    <div class="ribbon">
-        <img src="https://static.vecteezy.com/system/resources/previews/036/134/174/non_2x/pink-coquette-ribbon-bow-doodle-hand-drawn-png.png" alt="Pita">
     </div>
-    <div class="ribbon">
-        <img src="https://static.vecteezy.com/system/resources/previews/036/134/174/non_2x/pink-coquette-ribbon-bow-doodle-hand-drawn-png.png" alt="Pita">
+
+    <!-- Home -->
+    <div id="home" class="section">
+        <h1>Hallo! Web ini dibuat spesial untukmu, ayo eksplor!</h1>
+
+        <!-- Pita -->
+        <div class="ribbon">
+            <img src="https://static.vecteezy.com/system/resources/previews/036/134/174/non_2x/pink-coquette-ribbon-bow-doodle-hand-drawn-png.png" alt="Pita">
+        </div>
+        <div class="ribbon">
+            <img src="https://static.vecteezy.com/system/resources/previews/036/134/174/non_2x/pink-coquette-ribbon-bow-doodle-hand-drawn-png.png" alt="Pita">
+        </div>
+        <div class="ribbon">
+            <img src="https://static.vecteezy.com/system/resources/previews/036/134/174/non_2x/pink-coquette-ribbon-bow-doodle-hand-drawn-png.png" alt="Pita">
+        </div>
+        <div class="ribbon">
+            <img src="https://static.vecteezy.com/system/resources/previews/036/134/174/non_2x/pink-coquette-ribbon-bow-doodle-hand-drawn-png.png" alt="Pita">
+        </div>
+
+        <!-- Awan -->
+        <img src="https://png.pngtree.com/png-clipart/20220502/original/pngtree-awan-biru-png-png-image_7635012.png" class="cloud" alt="Awan">
+        <img src="https://png.pngtree.com/png-clipart/20220502/original/pngtree-awan-biru-png-png-image_7635012.png" class="cloud" alt="Awan">
+        <img src="https://png.pngtree.com/png-clipart/20220502/original/pngtree-awan-biru-png-png-image_7635012.png" class="cloud" alt="Awan">
     </div>
-    <div class="ribbon">
-        <img src="https://static.vecteezy.com/system/resources/previews/036/134/174/non_2x/pink-coquette-ribbon-bow-doodle-hand-drawn-png.png" alt="Pita">
+
+    <!-- Contact -->
+    <div id="contact" class="section">
+        <div class="contact">
+            <p><strong>Hubungi saya:</strong></p>
+            <p>📞 WhatsApp: <a href="https://wa.me/081272675958" target="_blank">081272675958</a></p>
+            <p>📷 Instagram: <a href="https://instagram.com/_nzyraa" target="_blank">@_nzyraa</a></p>
+        </div>
     </div>
-    <div class="ribbon">
-        <img src="https://static.vecteezy.com/system/resources/previews/036/134/174/non_2x/pink-coquette-ribbon-bow-doodle-hand-drawn-png.png" alt="Pita">
+
+    <!-- Tugas -->
+    <div id="tugas" class="section">
+        <h1>Bagian Tugas</h1>
+        <p>Di sini bisa ditambahkan daftar tugas atau dokumen.</p>
     </div>
-    <h1>Hallo! Web ini dibuat spesial untukmu, ayo eksplor!</h1>
-    <img src="https://png.pngtree.com/png-clipart/20220502/original/pngtree-awan-biru-png-png-image_7635012.png" class="cloud" style="top: 10%; left: 10%;" alt="Awan">
-    <img src="https://png.pngtree.com/png-clipart/20220502/original/pngtree-awan-biru-png-png-image_7635012.png" class="cloud" style="top: 50%; left: 50%;" alt="Awan">
-    <img src="https://png.pngtree.com/png-clipart/20220502/original/pngtree-awan-biru-png-png-image_7635012.png" class="cloud" style="bottom: 5%; left: 70%;" alt="Awan">
-    
-    <section id="contact" style="position: absolute; bottom: 10px; text-align: center; color: #660033;">
-        <p>WhatsApp: 081272675958</p>
-        <p>Instagram: @_nzyraa</p>
-    </section>
+
 </body>
 </html>
