@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Zira</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: url('https://png.pngtree.com/background/20210716/original/pngtree-soft-pink-pastel-ink-background-picture-image_1344872.jpg') no-repeat center center/cover;
+            position: relative;
+            font-family: Arial, sans-serif;
+        }
+
+        /* === MENU NAVIGASI === */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            display: flex;
+            justify-content: space-around;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #660033;
+            font-weight: bold;
+            padding: 10px 15px;
+            transition: 0.3s;
+        }
+
+        .navbar a:hover {
+            background: rgba(255, 182, 193, 0.5);
+            border-radius: 5px;
+        }
+
+        h1 {
+            color: #660033;
+            font-size: 2rem;
+            position: absolute;
+            top: 15%;
+            text-align: center;
+            animation: floatText 3s ease-in-out infinite;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes floatText {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* === FORM UPLOAD FILE === */
+        .file-upload {
+            position: absolute;
+            bottom: 10%;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .file-upload input {
+            margin-top: 10px;
+        }
+
+        .file-upload button {
+            background: #660033;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .file-upload button:hover {
+            background: #99004d;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION MENU -->
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#">Upload File</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <!-- JUDUL -->
+    <h1>Hallo! Web ini dibuat spesial untukmu, ayo eksplor!</h1>
+
+    <!-- FORM UPLOAD FILE -->
+    <div class="file-upload">
+        <h3>Upload File Kamu</h3>
+        <input type="file">
+        <button>Upload</button>
+    </div>
+
+</body>
+</html>
