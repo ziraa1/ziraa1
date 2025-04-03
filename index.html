@@ -3,76 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website zira</title>
+    <title>Website Zira</title>
     <style>
         body {
             margin: 0;
             height: 100vh;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
+            justify-content: center;
             overflow: hidden;
             background: url('https://png.pngtree.com/background/20210716/original/pngtree-soft-pink-pastel-ink-background-picture-image_1344872.jpg') no-repeat center center/cover;
             position: relative;
-        }
-        .ribbon {
-            position: absolute;
-            width: 120px;
-            height: auto;
-            animation: floatRibbon 3s ease-in-out infinite;
-        }
-        .ribbon img {
-            width: 100%;
-        }
-        .ribbon:nth-child(1) { top: 10%; left: 10%; animation-duration: 4s; }
-        .ribbon:nth-child(2) { top: 30%; left: 45%; animation-duration: 5s; }
-        .ribbon:nth-child(3) { top: 50%; left: 80%; animation-duration: 6s; }
-        
-        @keyframes floatRibbon {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(10px); }
-        }
-        h1 {
-             color: #660033;
             font-family: Arial, sans-serif;
+        }
+
+        /* === MENU NAVIGASI === */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            display: flex;
+            justify-content: space-around;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #660033;
+            font-weight: bold;
+            padding: 10px 15px;
+            transition: 0.3s;
+        }
+
+        .navbar a:hover {
+            background: rgba(255, 182, 193, 0.5);
+            border-radius: 5px;
+        }
+
+        h1 {
+            color: #660033;
             font-size: 2rem;
             position: absolute;
-            top: 10%;
+            top: 15%;
+            text-align: center;
             animation: floatText 3s ease-in-out infinite;
-            text-shadow: none;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
         }
+
         @keyframes floatText {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-10px); }
         }
-        .cloud {
+
+        /* === FORM UPLOAD FILE === */
+        .file-upload {
             position: absolute;
-            width: 100px;
-            animation: moveClouds 15s linear infinite;
+            bottom: 10%;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
-        .cloud:nth-child(2) { top: 10%; left: 10%; animation-duration: 18s; }
-        .cloud:nth-child(3) { top: 55%; left: 55%; animation-duration: 18s; }
-        .cloud:nth-child(4) { bottom: 5%; left: 70%; animation-duration: 18s; }
-        
-        @keyframes moveClouds {
-            0% { transform: translateX(-150px); opacity: 1; }
-            100% { transform: translateX(100vw); opacity: 0; }
+
+        .file-upload input {
+            margin-top: 10px;
+        }
+
+        .file-upload button {
+            background: #660033;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .file-upload button:hover {
+            background: #99004d;
         }
     </style>
 </head>
 <body>
-    <div class="ribbon">
-        <img src="https://static.vecteezy.com/system/resources/previews/036/134/174/non_2x/pink-coquette-ribbon-bow-doodle-hand-drawn-png.png" alt="Pita">
+
+    <!-- NAVIGATION MENU -->
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#">Upload File</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
     </div>
-    <div class="ribbon">
-        <img src="https://static.vecteezy.com/system/resources/previews/036/134/174/non_2x/pink-coquette-ribbon-bow-doodle-hand-drawn-png.png" alt="Pita">
-    </div>
-    <div class="ribbon">
-        <img src="https://static.vecteezy.com/system/resources/previews/036/134/174/non_2x/pink-coquette-ribbon-bow-doodle-hand-drawn-png.png" alt="Pita">
-    </div>
+
+    <!-- JUDUL -->
     <h1>Hallo! Web ini dibuat spesial untukmu, ayo eksplor!</h1>
-    <img src="https://png.pngtree.com/png-clipart/20220502/original/pngtree-awan-biru-png-png-image_7635012.png" class="cloud" style="top: 10%; left: 10%;" alt="Awan">
-    <img src="https://png.pngtree.com/png-clipart/20220502/original/pngtree-awan-biru-png-png-image_7635012.png" class="cloud" style="top: 50%; left: 50%;" alt="Awan">
-    <img src="https://png.pngtree.com/png-clipart/20220502/original/pngtree-awan-biru-png-png-image_7635012.png" class="cloud" style="bottom: 5%; left: 70%;" alt="Awan">
+
+    <!-- FORM UPLOAD FILE -->
+    <div class="file-upload">
+        <h3>Upload File Kamu</h3>
+        <input type="file">
+        <button>Upload</button>
+    </div>
+
 </body>
 </html>
