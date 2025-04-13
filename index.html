@@ -7,121 +7,108 @@
   <style>
     body {
       margin: 0;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
+      font-family: Arial, sans-serif;
       background: url('https://png.pngtree.com/background/20210716/original/pngtree-soft-pink-pastel-ink-background-picture-image_1344872.jpg') no-repeat center center/cover;
-      position: relative;
     }
+
     nav {
-      position: absolute;
-      top: 0;
-      width: 100%;
-      background-color: rgba(255, 255, 255, 0.7);
-      padding: 15px 0;
+      background-color: rgba(255, 255, 255, 0.9);
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      z-index: 2;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
+
+    nav .menu {
+      display: flex;
+      gap: 20px;
+    }
+
     nav a {
       text-decoration: none;
       color: #660033;
-      font-size: 1.2rem;
-      margin: 0 20px;
-      font-family: Arial, sans-serif;
+      font-weight: bold;
       cursor: pointer;
     }
+
     nav a:hover {
       color: #ff66b2;
     }
-    .ribbon {
-      position: absolute;
-      top: 40%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 120px;
-      height: auto;
-      animation: floatRibbon 3s ease-in-out infinite;
-      z-index: 1;
-    }
-    .ribbon img {
-      width: 100%;
-    }
-    @keyframes floatRibbon {
-      0%, 100% { transform: translate(-50%, -50%) translateY(0); }
-      50% { transform: translate(-50%, -50%) translateY(10px); }
-    }
-    h1 {
-      color: #660033;
-      font-family: Arial, sans-serif;
-      font-size: 2rem;
-      position: absolute;
-      top: 20%;
-      animation: floatText 3s ease-in-out infinite;
-      text-shadow: none;
-      z-index: 1;
-    }
-    @keyframes floatText {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-    }
-    .cloud {
-      position: absolute;
-      width: 100px;
-      animation: moveClouds 15s linear infinite;
-      z-index: 0;
-    }
-    @keyframes moveClouds {
-      0% { transform: translateX(-150px); opacity: 1; }
-      100% { transform: translateX(100vw); opacity: 0; }
-    }
-    .cloud:nth-child(2) { top: 10%; left: 10%; animation-duration: 18s; }
-    .cloud:nth-child(3) { top: 55%; left: 55%; animation-duration: 18s; }
-    .cloud:nth-child(4) { bottom: 5%; left: 70%; animation-duration: 18s; }
 
-    #tugas {
-      display: none;
-      position: absolute;
-      bottom: 10%;
-      background-color: rgba(255, 255, 255, 0.8);
-      padding: 15px 25px;
-      border-radius: 12px;
-      font-family: Arial, sans-serif;
+    nav .brand {
+      font-style: italic;
       color: #660033;
-      font-size: 1.2rem;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      z-index: 2;
+    }
+
+    .section {
+      display: none;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .active {
+      display: block;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #660033;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      color: black;
+      margin: 20px 0;
+    }
+
+    h3 {
+      font-size: 1.4rem;
+      font-weight: bold;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
   <nav>
-    <a href="#home">Home</a>
-    <a href="#contact">Contact</a>
-    <a onclick="showTugas()">Tugas</a>
+    <div class="menu">
+      <a onclick="showSection('home')">HOME</a>
+      <a onclick="showSection('tugas')">TUGAS</a>
+      <a onclick="showSection('about')">ABOUT</a>
+      <a onclick="showSection('contact')">CONTACT</a>
+    </div>
+  
   </nav>
 
-  <div class="ribbon">
-    <img src="https://static.vecteezy.com/system/resources/previews/036/134/174/non_2x/pink-coquette-ribbon-bow-doodle-hand-drawn-png.png" alt="Pita">
+  <div id="home" class="section active">
+    <h1>Hallo! Web ini dibuat spesial untukmu, ayo eksplor!</h1>
   </div>
 
-  <h1>Hallo! Web ini dibuat spesial untukmu, ayo eksplor!</h1>
+  <div id="tugas" class="section">
+    <h1>PENGUMPULAN TUGAS</h1>
+    <h2>UJIAN TENGAH SEMESTER</h2>
+    <h3>TUGAS 1</h3>
+  </div>
 
-  <img src="https://png.pngtree.com/png-clipart/20220502/original/pngtree-awan-biru-png-png-image_7635012.png" class="cloud" style="top: 10%; left: 10%;" alt="Awan">
-  <img src="https://png.pngtree.com/png-clipart/20220502/original/pngtree-awan-biru-png-png-image_7635012.png" class="cloud" style="top: 50%; left: 50%;" alt="Awan">
-  <img src="https://png.pngtree.com/png-clipart/20220502/original/pngtree-awan-biru-png-png-image_7635012.png" class="cloud" style="bottom: 5%; left: 70%;" alt="Awan">
+  <div id="about" class="section">
+    <h1>Tentang Website Ini</h1>
+    <p>Ini adalah website pribadi dengan desain yang menarik</p>
+  </div>
 
-  <div id="tugas">
-    hayy selamat datang ditugas uts
+  <div id="contact" class="section">
+    <h1>Hubungi Saya</h1>
+    <p>Email: snazira818@email.com</p>
   </div>
 
   <script>
-    function showTugas() {
-      const tugasBox = document.getElementById('tugas');
-      tugasBox.style.display = 'block';
+    function showSection(id) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
     }
   </script>
 </body>
