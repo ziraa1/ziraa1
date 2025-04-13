@@ -9,6 +9,7 @@
       margin: 0;
       font-family: Arial, sans-serif;
       background: url('https://png.pngtree.com/background/20210716/original/pngtree-soft-pink-pastel-ink-background-picture-image_1344872.jpg') no-repeat center center/cover;
+      overflow: hidden;
     }
 
     nav {
@@ -48,6 +49,8 @@
       display: none;
       padding: 60px 20px;
       text-align: center;
+      min-height: 100vh;
+      position: relative;
     }
 
     .active {
@@ -71,9 +74,54 @@
       font-weight: bold;
       margin-top: 40px;
     }
+
+    /* Animasi Home */
+    .cloud {
+      position: absolute;
+      width: 100px;
+      animation: moveClouds 15s linear infinite;
+      z-index: 1;
+    }
+
+    @keyframes moveClouds {
+      0% { transform: translateX(-150px); opacity: 1; }
+      100% { transform: translateX(100vw); opacity: 0; }
+    }
+
+    .ribbon {
+      position: absolute;
+      width: 120px;
+      animation: floatRibbon 3s ease-in-out infinite;
+      z-index: 2;
+    }
+
+    .ribbon img {
+      width: 100%;
+    }
+
+    @keyframes floatRibbon {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(10px); }
+    }
+
+    .floating-text {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #660033;
+      animation: floatText 3s ease-in-out infinite;
+      position: relative;
+      z-index: 3;
+      margin-top: 150px;
+    }
+
+    @keyframes floatText {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
   </style>
 </head>
 <body>
+
   <nav>
     <div class="menu">
       <a onclick="showSection('home')">HOME</a>
@@ -81,27 +129,44 @@
       <a onclick="showSection('about')">ABOUT</a>
       <a onclick="showSection('contact')">CONTACT</a>
     </div>
-  
+    <div class="brand">aleaprilian.my.id</div>
   </nav>
 
+  <!-- HOME SECTION -->
   <div id="home" class="section active">
-    <h1>Hallo! Web ini dibuat spesial untukmu, ayo eksplor!</h1>
+    <!-- Awan -->
+    <img src="https://png.pngtree.com/png-clipart/20220502/original/pngtree-awan-biru-png-png-image_7635012.png" class="cloud" style="top: 10%; left: 10%;" alt="Awan">
+    <img src="https://png.pngtree.com/png-clipart/20220502/original/pngtree-awan-biru-png-png-image_7635012.png" class="cloud" style="top: 50%; left: 50%;" alt="Awan">
+    <img src="https://png.pngtree.com/png-clipart/20220502/original/pngtree-awan-biru-png-png-image_7635012.png" class="cloud" style="bottom: 5%; left: 70%;" alt="Awan">
+
+    <!-- Pita Tengah -->
+    <div class="ribbon" style="top: 30%; left: 45%;">
+      <img src="https://static.vecteezy.com/system/resources/previews/036/134/174/non_2x/pink-coquette-ribbon-bow-doodle-hand-drawn-png.png" alt="Pita">
+    </div>
+
+    <!-- Teks Bergerak -->
+    <div class="floating-text">Hallo! Web ini dibuat spesial untukmu, ayo eksplor!</div>
   </div>
 
+  <!-- TUGAS SECTION -->
   <div id="tugas" class="section">
     <h1>PENGUMPULAN TUGAS</h1>
     <h2>UJIAN TENGAH SEMESTER</h2>
     <h3>TUGAS 1</h3>
   </div>
 
+  <!-- ABOUT SECTION -->
   <div id="about" class="section">
     <h1>Tentang Website Ini</h1>
-    <p>Ini adalah website pribadi dengan desain yang menarik</p>
+    <p>Ini adalah website pribadi dengan desain yang manis dan lembut 💖</p>
   </div>
 
+  <!-- CONTACT SECTION -->
   <div id="contact" class="section">
     <h1>Hubungi Saya</h1>
-    <p>Email: snazira818@email.com</p>
+    <p>Email: snazira818@gmail.com</p>
+    <p>Instagram: _nzyraa</p>
+    <p>WhatsApp: 0813-7267-5958</p>
   </div>
 
   <script>
