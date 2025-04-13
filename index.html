@@ -45,13 +45,14 @@
             width: 100%;
         }
         .ribbon:nth-child(1) { top: 10%; left: 10%; animation-duration: 4s; }
-        .ribbon:nth-child(2) { top: 30%; left: 45%; animation-duration: 5s; }
-        .ribbon:nth-child(3) { top: 50%; left: 80%; animation-duration: 6s; }
+        .ribbon:nth-child(2) { top: 30%; left: 10%; animation-duration: 5s; }
+        .ribbon:nth-child(3) { top: 50%; left: 10%; animation-duration: 6s; }
 
         @keyframes floatRibbon {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(10px); }
         }
+
         h1 {
             color: #660033;
             font-family: Arial, sans-serif;
@@ -61,15 +62,18 @@
             animation: floatText 3s ease-in-out infinite;
             text-shadow: none;
         }
+
         @keyframes floatText {
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-10px); }
         }
+
         .cloud {
             position: absolute;
             width: 100px;
             animation: moveClouds 15s linear infinite;
         }
+
         .cloud:nth-child(2) { top: 10%; left: 10%; animation-duration: 18s; }
         .cloud:nth-child(3) { top: 55%; left: 55%; animation-duration: 18s; }
         .cloud:nth-child(4) { bottom: 5%; left: 70%; animation-duration: 18s; }
@@ -86,6 +90,7 @@
         <a href="#contact">Contact</a>
         <a href="#tugas">Tugas</a>
     </nav>
+
     <div class="ribbon">
         <img src="https://static.vecteezy.com/system/resources/previews/036/134/174/non_2x/pink-coquette-ribbon-bow-doodle-hand-drawn-png.png" alt="Pita">
     </div>
@@ -95,7 +100,9 @@
     <div class="ribbon">
         <img src="https://static.vecteezy.com/system/resources/previews/036/134/174/non_2x/pink-coquette-ribbon-bow-doodle-hand-drawn-png.png" alt="Pita">
     </div>
+
     <h1>Hallo! Web ini dibuat spesial untukmu, ayo eksplor!</h1>
+
     <img src="https://png.pngtree.com/png-clipart/20220502/original/pngtree-awan-biru-png-png-image_7635012.png" class="cloud" style="top: 10%; left: 10%;" alt="Awan">
     <img src="https://png.pngtree.com/png-clipart/20220502/original/pngtree-awan-biru-png-png-image_7635012.png" class="cloud" style="top: 50%; left: 50%;" alt="Awan">
     <img src="https://png.pngtree.com/png-clipart/20220502/original/pngtree-awan-biru-png-png-image_7635012.png" class="cloud" style="bottom: 5%; left: 70%;" alt="Awan">
