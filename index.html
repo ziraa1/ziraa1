@@ -20,7 +20,7 @@
       padding: 15px 30px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
       position: sticky;
-      top: 10;
+      top: 0;
       z-index: 1000;
     }
 
@@ -75,7 +75,6 @@
       margin-top: 40px;
     }
 
-    /* Animasi Home */
     .cloud {
       position: absolute;
       width: 100px;
@@ -89,19 +88,15 @@
     }
 
     .ribbon {
-      position: absolute;
+      position: relative;
       width: 120px;
       animation: floatRibbon 3s ease-in-out infinite;
       z-index: 2;
+      margin: 30px auto 0 auto;
     }
 
     .ribbon img {
       width: 100%;
-    }
-
-    @keyframes floatRibbon {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(10px); }
     }
 
     .floating-text {
@@ -111,7 +106,7 @@
       animation: floatText 3s ease-in-out infinite;
       position: relative;
       z-index: 3;
-      margin-top: 150px;
+      margin-top: 80px;
     }
 
     @keyframes floatText {
@@ -128,45 +123,35 @@
       <a onclick="showSection('tugas')">TUGAS</a>
       <a onclick="showSection('about')">ABOUT</a>
       <a onclick="showSection('contact')">CONTACT</a>
-    </div>
-    
   </nav>
 
-  <!-- HOME SECTION -->
   <div id="home" class="section active">
-    <!-- Awan -->
     <img src="https://png.pngtree.com/png-clipart/20220502/original/pngtree-awan-biru-png-png-image_7635012.png" class="cloud" style="top: 10%; left: 10%;" alt="Awan">
     <img src="https://png.pngtree.com/png-clipart/20220502/original/pngtree-awan-biru-png-png-image_7635012.png" class="cloud" style="top: 50%; left: 50%;" alt="Awan">
     <img src="https://png.pngtree.com/png-clipart/20220502/original/pngtree-awan-biru-png-png-image_7635012.png" class="cloud" style="bottom: 5%; left: 70%;" alt="Awan">
+    <img src="https://png.pngtree.com/png-clipart/20220502/original/pngtree-awan-biru-png-png-image_7635012.png" class="cloud" style="bottom: 10%; left: 20%;" alt="Awan Bawah">
 
-    <!-- Pita Tengah -->
-    <div class="ribbon" style="top: 30%; left: 45%;">
+    <div id="typing-text" class="floating-text"></div>
+
+    <div class="ribbon">
       <img src="https://static.vecteezy.com/system/resources/previews/036/134/174/non_2x/pink-coquette-ribbon-bow-doodle-hand-drawn-png.png" alt="Pita">
     </div>
-
-    <!-- Teks Bergerak -->
-    <div class="floating-text">Hallo! Web ini dibuat spesial untukmu, ayo eksplor!</div>
   </div>
 
-  <!-- TUGAS SECTION -->
   <div id="tugas" class="section">
     <h1>PENGUMPULAN TUGAS</h1>
     <h2>UJIAN TENGAH SEMESTER</h2>
     <h3>TUGAS 1</h3>
   </div>
 
-  <!-- ABOUT SECTION -->
   <div id="about" class="section">
     <h1>Tentang Website Ini</h1>
     <p>Ini adalah website pribadi dengan desain yang manis dan lembut 💖</p>
   </div>
 
-  <!-- CONTACT SECTION -->
   <div id="contact" class="section">
     <h1>Hubungi Saya</h1>
-    <p>Email: snazira818@gmail.com</p>
-    <p>Instagram: _nzyraa</p>
-    <p>WhatsApp: 0813-7267-5958</p>
+    <p>Email: kamu@email.com</p>
   </div>
 
   <script>
@@ -175,6 +160,30 @@
       sections.forEach(sec => sec.classList.remove('active'));
       document.getElementById(id).classList.add('active');
     }
+
+    const text = "Hai kamu~ Web ini dibuat spesial untukmu ✨ Yuk, eksplor bareng!";
+    const typingTarget = document.getElementById("typing-text");
+    const typingSound = new Audio("https://www.myinstants.com/media/sounds/typewriter-key.mp3");
+
+    let i = 0;
+
+    function typeWriter() {
+      if (i < text.length) {
+        typingTarget.innerHTML += text.charAt(i);
+
+        // Mainkan suara kecuali spasi
+        if (text.charAt(i) !== " ") {
+          typingSound.currentTime = 0;
+          typingSound.play();
+        }
+
+        i++;
+        setTimeout(typeWriter, 50);
+      }
+    }
+
+    window.onload = typeWriter;
   </script>
+
 </body>
 </html>
