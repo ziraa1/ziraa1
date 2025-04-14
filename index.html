@@ -46,7 +46,6 @@
       color: #660033;
     }
 
-    /* Dropdown Menu */
     .dropdown {
       position: relative;
     }
@@ -127,15 +126,9 @@
     }
 
     @keyframes floatRibbon {
-      0% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-10px); /* Geser pita ke atas */
-      }
-      100% {
-        transform: translateY(0); /* Kembali ke posisi semula */
-      }
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
     }
 
     .ribbon img {
@@ -163,7 +156,6 @@
   <nav>
     <div class="menu">
       <a onclick="showSection('home')">HOME</a>
-      <!-- Dropdown menu for TUGAS -->
       <div class="dropdown">
         <a href="javascript:void(0)">TUGAS</a>
         <div class="dropdown-content">
@@ -193,18 +185,27 @@
     <h1>PENGUMPULAN TUGAS</h1>
     <h2>Detail Tugas</h2>
     <p>Ini adalah detail tugas yang perlu kamu kumpulkan.</p>
+
+    <h3>Video Terkait Tugas:</h3>
+    <div style="display: flex; justify-content: center; margin-top: 20px;">
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/KdhQ26H2yRo?si=0Y6PnNVMwH0RKzgF" 
+        title="YouTube video player" frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+      </iframe>
+    </div>
   </div>
 
   <div id="about" class="section">
     <h1>Tentang saya</h1>
     <p>Halo, saya Siti Nazira, mahasiswa semester 2 di Jurusan Teknik Informatika di Universitas Riau. Saya berusia 19 tahun dan memiliki minat yang besar di dunia komunikasi dan teknologi. Saya percaya bahwa kedua bidang ini memiliki potensi besar untuk menciptakan perubahan yang positif dalam kehidupan sehari-hari.
-       Sebagai mahasiswa di bidang teknologi, saya sangat tertarik dengan perkembangan dunia digital dan bagaimana teknologi dapat digunakan untuk meningkatkan kualitas hidup serta mempermudah komunikasi antara individu. Selain itu, saya juga senang mengeksplorasi cara-cara kreatif untuk mengintegrasikan teknologi dalam kehidupan sosial.</p>
+    Sebagai mahasiswa di bidang teknologi, saya sangat tertarik dengan perkembangan dunia digital dan bagaimana teknologi dapat digunakan untuk meningkatkan kualitas hidup serta mempermudah komunikasi antara individu. Selain itu, saya juga senang mengeksplorasi cara-cara kreatif untuk mengintegrasikan teknologi dalam kehidupan sosial.</p>
   </div>
 
   <div id="contact" class="section">
     <h1>Hubungi Saya</h1>
     <p>Email: <a href="mailto:Snazira818@Gmail.com">snazira818@Gmail.com</a></p>
-    <p>Instagram: <a href="https://www.instagram.com/username" target="_blank">@_nzyraa</a></p>
+    <p>Instagram: <a href="https://www.instagram.com/_nzyraa" target="_blank">@_nzyraa</a></p>
     <p>WhatsApp: <a href="https://wa.me/6281234567890" target="_blank">+62 812-0000-0000</a></p>
   </div>
 
@@ -225,8 +226,8 @@
       if (i < text.length) {
         typingTarget.innerHTML += text.charAt(i);
 
-        // Mainkan suara kecuali spasi
         if (text.charAt(i) !== " ") {
+          typingSound.pause();
           typingSound.currentTime = 0;
           typingSound.play();
         }
