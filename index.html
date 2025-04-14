@@ -34,7 +34,6 @@
       color: #660033;
       font-weight: bold;
       cursor: pointer;
-      transition: color 0.3s ease;
     }
 
     nav a:hover {
@@ -97,9 +96,15 @@
     }
 
     @keyframes floatRibbon {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-      100% { transform: translateY(0); }
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px); /* Geser pita ke atas */
+      }
+      100% {
+        transform: translateY(0); /* Kembali ke posisi semula */
+      }
     }
 
     .ribbon img {
@@ -127,7 +132,7 @@
   <nav>
     <div class="menu">
       <a onclick="showSection('home')">HOME</a>
-      <a onclick="showSection('tugas')">TUGAS</a>
+      <a href="https://docs.google.com/document/d/1a1TWQqU2n3p3AfuJJgECLx9_4JqrubCv/edit?usp=sharing&ouid=115746019168302444149&rtpof=true&sd=true" target="_blank">TUGAS</a>
       <a onclick="showSection('about')">ABOUT</a>
       <a onclick="showSection('contact')">CONTACT</a>
     </div>
@@ -149,19 +154,19 @@
   <div id="tugas" class="section">
     <h1>PENGUMPULAN TUGAS</h1>
     <h2>UJIAN TENGAH SEMESTER</h2>
-    <h3>TUGAS 1 - Website Multimedia</h3>
-    <p>Website ini merupakan proyek tugas individu dalam mata kuliah Sistem Multimedia. Desainnya mencerminkan perpaduan antara animasi, teks, gambar, audio, dan video secara interaktif. Tema pastel, animasi awan, efek teks ketik, serta layout responsif bertujuan menampilkan estetika yang lembut dan fungsional. Website dibangun menggunakan HTML, CSS, dan JavaScript, dengan tambahan elemen interaktif seperti efek suara dan ribbon animasi. Proyek ini menunjukkan pemahaman penerapan elemen multimedia dalam konteks desain web.</p>
+    <h3>TUGAS 1</h3>
   </div>
 
   <div id="about" class="section">
     <h1>Tentang saya</h1>
-    <p>Halo, saya Siti Nazira, mahasiswa semester 2 di Jurusan Teknik Informatika di Universitas Riau. Saya berusia 19 tahun dan memiliki minat yang besar di dunia komunikasi dan teknologi. Saya percaya bahwa kedua bidang ini memiliki potensi besar untuk menciptakan perubahan yang positif dalam kehidupan sehari-hari.</p>
+    <p>Halo, saya Siti Nazira, mahasiswa semester 2 di Jurusan Teknik Informatika di Universitas Riau. Saya berusia 19 tahun dan memiliki minat yang besar di dunia komunikasi dan teknologi. Saya percaya bahwa kedua bidang ini memiliki potensi besar untuk menciptakan perubahan yang positif dalam kehidupan sehari-hari.
+       Sebagai mahasiswa di bidang teknologi, saya sangat tertarik dengan perkembangan dunia digital dan bagaimana teknologi dapat digunakan untuk meningkatkan kualitas hidup serta mempermudah komunikasi antara individu. Selain itu, saya juga senang mengeksplorasi cara-cara kreatif untuk mengintegrasikan teknologi dalam kehidupan sosial.</p>
   </div>
 
   <div id="contact" class="section">
     <h1>Hubungi Saya</h1>
     <p>Email: <a href="mailto:Snazira818@Gmail.com">snazira818@Gmail.com</a></p>
-    <p>Instagram: <a href="https://www.instagram.com/_nzyraa" target="_blank">@_nzyraa</a></p>
+    <p>Instagram: <a href="https://www.instagram.com/username" target="_blank">@_nzyraa</a></p>
     <p>WhatsApp: <a href="https://wa.me/6281234567890" target="_blank">+62 812-0000-0000</a></p>
   </div>
 
@@ -182,6 +187,7 @@
       if (i < text.length) {
         typingTarget.innerHTML += text.charAt(i);
 
+        // Mainkan suara kecuali spasi
         if (text.charAt(i) !== " ") {
           typingSound.currentTime = 0;
           typingSound.play();
