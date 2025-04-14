@@ -41,12 +41,6 @@
       color: #ff66b2;
     }
 
-    nav .brand {
-      font-style: italic;
-      color: #660033;
-    }
-
-    /* Dropdown Menu */
     .dropdown {
       position: relative;
     }
@@ -100,12 +94,6 @@
       margin: 20px 0;
     }
 
-    h3 {
-      font-size: 1.4rem;
-      font-weight: bold;
-      margin-top: 40px;
-    }
-
     .cloud {
       position: absolute;
       width: 100px;
@@ -127,15 +115,8 @@
     }
 
     @keyframes floatRibbon {
-      0% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-10px); /* Geser pita ke atas */
-      }
-      100% {
-        transform: translateY(0); /* Kembali ke posisi semula */
-      }
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
     }
 
     .ribbon img {
@@ -163,11 +144,10 @@
   <nav>
     <div class="menu">
       <a onclick="showSection('home')">HOME</a>
-      <!-- Dropdown menu for TUGAS -->
       <div class="dropdown">
         <a href="javascript:void(0)">TUGAS</a>
         <div class="dropdown-content">
-          <a href="https://docs.google.com/document/d/1a1TWQqU2n3p3AfuJJgECLx9_4JqrubCv/edit?usp=sharing&ouid=115746019168302444149&rtpof=true&sd=true" target="_blank">UTS</a>
+          <a href="uts_sistem_multimedia.pdf" target="_blank">UTS</a>
           <a onclick="showSection('tugas')">Tugas</a>
         </div>
       </div>
@@ -180,10 +160,8 @@
     <img src="https://png.pngtree.com/png-clipart/20220502/original/pngtree-awan-biru-png-png-image_7635012.png" class="cloud" style="top: 10%; left: 10%;" alt="Awan">
     <img src="https://png.pngtree.com/png-clipart/20220502/original/pngtree-awan-biru-png-png-image_7635012.png" class="cloud" style="top: 50%; left: 50%;" alt="Awan">
     <img src="https://png.pngtree.com/png-clipart/20220502/original/pngtree-awan-biru-png-png-image_7635012.png" class="cloud" style="bottom: 5%; left: 70%;" alt="Awan">
-    <img src="https://png.pngtree.com/png-clipart/20220502/original/pngtree-awan-biru-png-png-image_7635012.png" class="cloud" style="bottom: 10%; left: 20%;" alt="Awan Bawah">
-
+    <img src="https://png.pngtree.com/png-clipart/20220502/original/pngtree-awan-biru-png-png-image_7635012.png" class="cloud" style="bottom: 10%; left: 20%;" alt="Awan">
     <div id="typing-text" class="floating-text"></div>
-
     <div class="ribbon">
       <img src="https://static.vecteezy.com/system/resources/previews/036/134/174/non_2x/pink-coquette-ribbon-bow-doodle-hand-drawn-png.png" alt="Pita">
     </div>
@@ -197,8 +175,7 @@
 
   <div id="about" class="section">
     <h1>Tentang saya</h1>
-    <p>Halo, saya Siti Nazira, mahasiswa semester 2 di Jurusan Teknik Informatika di Universitas Riau. Saya berusia 19 tahun dan memiliki minat yang besar di dunia komunikasi dan teknologi. Saya percaya bahwa kedua bidang ini memiliki potensi besar untuk menciptakan perubahan yang positif dalam kehidupan sehari-hari.
-       Sebagai mahasiswa di bidang teknologi, saya sangat tertarik dengan perkembangan dunia digital dan bagaimana teknologi dapat digunakan untuk meningkatkan kualitas hidup serta mempermudah komunikasi antara individu. Selain itu, saya juga senang mengeksplorasi cara-cara kreatif untuk mengintegrasikan teknologi dalam kehidupan sosial.</p>
+    <p>Halo, saya Siti Nazira, mahasiswa semester 2 di Jurusan Teknik Informatika di Universitas Riau...</p>
   </div>
 
   <div id="contact" class="section">
@@ -220,17 +197,13 @@
     const typingSound = new Audio("https://www.myinstants.com/media/sounds/typewriter-key.mp3");
 
     let i = 0;
-
     function typeWriter() {
       if (i < text.length) {
         typingTarget.innerHTML += text.charAt(i);
-
-        // Mainkan suara kecuali spasi
         if (text.charAt(i) !== " ") {
           typingSound.currentTime = 0;
           typingSound.play();
         }
-
         i++;
         setTimeout(typeWriter, 50);
       }
