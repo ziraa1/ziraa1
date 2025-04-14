@@ -27,6 +27,7 @@
     nav .menu {
       display: flex;
       gap: 20px;
+      position: relative;
     }
 
     nav a {
@@ -43,6 +44,36 @@
     nav .brand {
       font-style: italic;
       color: #660033;
+    }
+
+    /* Dropdown Menu */
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: rgba(255, 255, 255, 0.9);
+      min-width: 160px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      z-index: 1;
+      top: 100%;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .dropdown-content a {
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      color: #660033;
+    }
+
+    .dropdown-content a:hover {
+      color: #ff66b2;
     }
 
     .section {
@@ -132,7 +163,15 @@
   <nav>
     <div class="menu">
       <a onclick="showSection('home')">HOME</a>
-      <a href="https://docs.google.com/document/d/1a1TWQqU2n3p3AfuJJgECLx9_4JqrubCv/edit?usp=sharing&ouid=115746019168302444149&rtpof=true&sd=true" target="_blank">TUGAS</a>
+      <!-- Dropdown menu for TUGAS -->
+      <div class="dropdown">
+        <a href="javascript:void(0)">TUGAS</a>
+        <div class="dropdown-content">
+          <a href="https://docs.google.com/document/d/1a1TWQqU2n3p3AfuJJgECLx9_4JqrubCv/edit?usp=sharing&ouid=115746019168302444149&rtpof=true&sd=true" target="_blank">Tugas 1</a>
+          <a href="https://github.com/your-repository" target="_blank">GitHub</a>
+          <a onclick="showSection('uts')">UTS</a>
+        </div>
+      </div>
       <a onclick="showSection('about')">ABOUT</a>
       <a onclick="showSection('contact')">CONTACT</a>
     </div>
@@ -151,10 +190,10 @@
     </div>
   </div>
 
-  <div id="tugas" class="section">
-    <h1>PENGUMPULAN TUGAS</h1>
-    <h2>UJIAN TENGAH SEMESTER</h2>
-    <h3>TUGAS 1</h3>
+  <div id="uts" class="section">
+    <h1>UTS - Ujian Tengah Semester</h1>
+    <h2>Detail Tugas UTS</h2>
+    <p>Berikut adalah informasi mengenai ujian tengah semester.</p>
   </div>
 
   <div id="about" class="section">
