@@ -27,7 +27,6 @@
     nav .menu {
       display: flex;
       gap: 20px;
-      position: relative;
     }
 
     nav a {
@@ -39,11 +38,6 @@
 
     nav a:hover {
       color: #ff66b2;
-    }
-
-    nav .brand {
-      font-style: italic;
-      color: #660033;
     }
 
     /* Dropdown Menu */
@@ -163,12 +157,12 @@
   <nav>
     <div class="menu">
       <a onclick="showSection('home')">HOME</a>
-      <!-- Dropdown menu for TUGAS -->
       <div class="dropdown">
         <a href="javascript:void(0)">TUGAS</a>
         <div class="dropdown-content">
-          <a href="https://docs.google.com/document/d/1a1TWQqU2n3p3AfuJJgECLx9_4JqrubCv/edit?usp=sharing&ouid=115746019168302444149&rtpof=true&sd=true" target="_blank">UTS</a>
+          <a onclick="showSection('uts')">UTS</a>
           <a onclick="showSection('tugas')">Tugas</a>
+          <a onclick="showSection('dll')">DLL</a> <!-- Menambahkan opsi DLL -->
         </div>
       </div>
       <a onclick="showSection('about')">ABOUT</a>
@@ -189,10 +183,39 @@
     </div>
   </div>
 
+  <div id="uts" class="section">
+    <h1>UTS</h1>
+    <h2>UJIAN TENGAH SEMESTER</h2>
+    <h3>TUGAS 1</h3>
+  </div>
+
   <div id="tugas" class="section">
     <h1>PENGUMPULAN TUGAS</h1>
     <h2>Detail Tugas</h2>
-    <p>Ini adalah detail tugas yang perlu kamu kumpulkan.</p>
+    <h3>UTS</h3>
+  </div>
+
+  <!-- Bagian DLL -->
+  <div id="dll" class="section">
+    <h1>DLL - Video, Audio, & Gambar</h1>
+
+    <!-- Video Upin & Ipin -->
+    <h3>Video Upin & Ipin (5 detik)</h3>
+    <video width="320" height="240" controls>
+      <source src="https://www.example.com/video-upin-ipin.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- Audio Kucing -->
+    <h3>Audio Kucing</h3>
+    <audio controls>
+      <source src="https://www.example.com/audio-kucing.mp3" type="audio/mp3">
+      Your browser does not support the audio element.
+    </audio>
+
+    <!-- Gambar Kucing -->
+    <h3>Gambar Kucing</h3>
+    <img src="https://www.example.com/gambar-kucing.jpg" alt="Gambar Kucing" width="300">
   </div>
 
   <div id="about" class="section">
