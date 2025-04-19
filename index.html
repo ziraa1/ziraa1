@@ -75,15 +75,6 @@
       color: #ff66b2;
     }
 
-    .dropdown-content .dropdown {
-      position: relative;
-    }
-
-    .dropdown-content .dropdown-content {
-      top: 0;
-      left: 100%;
-    }
-
     .section {
       display: none;
       padding: 60px 20px;
@@ -96,22 +87,17 @@
       display: block;
     }
 
-    h1 {
-      font-size: 2rem;
+    h1, h2, h3 {
       color: #660033;
-      margin-bottom: 20px;
     }
 
-    h2 {
-      font-size: 1.6rem;
-      color: black;
-      margin: 20px 0;
-    }
-
-    h3 {
-      font-size: 1.4rem;
-      font-weight: bold;
-      margin-top: 40px;
+    .font-folder {
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 600px;
+      background-color: rgba(255, 255, 255, 0.8);
     }
 
     .cloud {
@@ -168,22 +154,8 @@
       <div class="dropdown">
         <a href="javascript:void(0)">TUGAS</a>
         <div class="dropdown-content">
-          <a href="https://docs.google.com/document/d/1a1TWQqU2n3p3AfuJJgECLx9_4JqrubCv/edit?usp=sharing&ouid=115746019168302444149&rtpof=true&sd=true" target="_blank">UTS</a>
-          <div class="dropdown">
-            <a href="javascript:void(0)">Tugas</a>
-            <div class="dropdown-content" style="left: 100%; top: 0;">
-              <a href="folder/times-new-roman/index.html" target="_blank">Times New Roman</a>
-              <a href="folder/arial/index.html" target="_blank">Arial</a>
-              <a href="folder/helvetica/index.html" target="_blank">Helvetica</a>
-              <a href="folder/verdana/index.html" target="_blank">Verdana</a>
-              <a href="folder/calibri/index.html" target="_blank">Calibri</a>
-              <a href="folder/courier-new/index.html" target="_blank">Courier New</a>
-              <a href="folder/georgia/index.html" target="_blank">Georgia</a>
-              <a href="folder/tahoma/index.html" target="_blank">Tahoma</a>
-              <a href="folder/futura/index.html" target="_blank">Futura</a>
-              <a href="folder/garamond/index.html" target="_blank">Garamond</a>
-            </div>
-          </div>
+          <a href="https://docs.google.com/document/d/1a1TWQqU2n3p3AfuJJgECLx9_4JqrubCv/edit?usp=sharing" target="_blank">UTS</a>
+          <a onclick="showSection('tugas')">Tugas</a>
         </div>
       </div>
       <a onclick="showSection('about')">ABOUT</a>
@@ -210,22 +182,33 @@
     <p>Selamat menyaksikan.</p>
 
     <h3>Video:</h3>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/KdhQ26H2yRo?si=0Y6PnNVMwH0RKzgF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/KdhQ26H2yRo?si=0Y6PnNVMwH0RKzgF" 
+    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+    gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
     <h3>Musik favorit:</h3>
-    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1UPB5rYJ0bzn6mNSoAHrZC?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <iframe style="border-radius:12px" 
+    src="https://open.spotify.com/embed/track/1UPB5rYJ0bzn6mNSoAHrZC?utm_source=generator" 
+    width="100%" height="152" frameBorder="0" allowfullscreen="" 
+    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <p><a href="https://open.spotify.com/track/1UPB5rYJ0bzn6mNSoAHrZC" target="_blank" style="color: #660033; font-weight: bold;">🎧 Klik di sini jika pemutar tidak muncul</a></p>
 
-    <p>
-      <a href="https://open.spotify.com/track/1UPB5rYJ0bzn6mNSoAHrZC" target="_blank" style="color: #660033; font-weight: bold;">
-        🎧 Klik di sini jika pemutar tidak muncul
-      </a>
-    </p>
+    <h3>Contoh Font:</h3>
+    <div class="font-folder" style="font-family: 'Times New Roman', serif;"><h3>Times New Roman</h3><p>Contoh teks dengan font Times New Roman.</p></div>
+    <div class="font-folder" style="font-family: Arial, sans-serif;"><h3>Arial</h3><p>Contoh teks dengan font Arial.</p></div>
+    <div class="font-folder" style="font-family: Helvetica, sans-serif;"><h3>Helvetica</h3><p>Contoh teks dengan font Helvetica.</p></div>
+    <div class="font-folder" style="font-family: Verdana, sans-serif;"><h3>Verdana</h3><p>Contoh teks dengan font Verdana.</p></div>
+    <div class="font-folder" style="font-family: Calibri, sans-serif;"><h3>Calibri</h3><p>Contoh teks dengan font Calibri.</p></div>
+    <div class="font-folder" style="font-family: 'Courier New', monospace;"><h3>Courier New</h3><p>Contoh teks dengan font Courier New.</p></div>
+    <div class="font-folder" style="font-family: Georgia, serif;"><h3>Georgia</h3><p>Contoh teks dengan font Georgia.</p></div>
+    <div class="font-folder" style="font-family: Tahoma, sans-serif;"><h3>Tahoma</h3><p>Contoh teks dengan font Tahoma.</p></div>
+    <div class="font-folder" style="font-family: Futura, sans-serif;"><h3>Futura</h3><p>Contoh teks dengan font Futura.</p></div>
+    <div class="font-folder" style="font-family: Garamond, serif;"><h3>Garamond</h3><p>Contoh teks dengan font Garamond.</p></div>
   </div>
 
   <div id="about" class="section">
     <h1>Tentang saya</h1>
-    <p>Halo, saya Siti Nazira, mahasiswa semester 2 di Jurusan Teknik Informatika di Universitas Riau. Saya berusia 19 tahun dan memiliki minat yang besar di dunia komunikasi dan teknologi. Saya percaya bahwa kedua bidang ini memiliki potensi besar untuk menciptakan perubahan yang positif dalam kehidupan sehari-hari.
-    Sebagai mahasiswa di bidang teknologi, saya sangat tertarik dengan perkembangan dunia digital dan bagaimana teknologi dapat digunakan untuk meningkatkan kualitas hidup serta mempermudah komunikasi antara individu. Selain itu, saya juga senang mengeksplorasi cara-cara kreatif untuk mengintegrasikan teknologi dalam kehidupan sosial.</p>
+    <p>Halo, saya Siti Nazira, mahasiswa semester 2 di Jurusan Teknik Informatika di Universitas Riau. Saya berusia 19 tahun dan memiliki minat yang besar di dunia komunikasi dan teknologi. Saya percaya bahwa kedua bidang ini memiliki potensi besar untuk menciptakan perubahan yang positif dalam kehidupan sehari-hari.</p>
   </div>
 
   <div id="contact" class="section">
@@ -247,17 +230,14 @@
     const typingSound = new Audio("https://www.myinstants.com/media/sounds/typewriter-key.mp3");
 
     let i = 0;
-
     function typeWriter() {
       if (i < text.length) {
         typingTarget.innerHTML += text.charAt(i);
-
         if (text.charAt(i) !== " ") {
           typingSound.pause();
           typingSound.currentTime = 0;
           typingSound.play();
         }
-
         i++;
         setTimeout(typeWriter, 50);
       }
@@ -265,6 +245,5 @@
 
     window.onload = typeWriter;
   </script>
-
 </body>
 </html>
