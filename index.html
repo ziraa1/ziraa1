@@ -75,6 +75,15 @@
       color: #ff66b2;
     }
 
+    .dropdown-content .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content .dropdown-content {
+      top: 0;
+      left: 100%;
+    }
+
     .section {
       display: none;
       padding: 60px 20px;
@@ -160,7 +169,21 @@
         <a href="javascript:void(0)">TUGAS</a>
         <div class="dropdown-content">
           <a href="https://docs.google.com/document/d/1a1TWQqU2n3p3AfuJJgECLx9_4JqrubCv/edit?usp=sharing&ouid=115746019168302444149&rtpof=true&sd=true" target="_blank">UTS</a>
-          <a onclick="showSection('tugas')">Tugas</a>
+          <div class="dropdown">
+            <a href="javascript:void(0)">Tugas</a>
+            <div class="dropdown-content" style="left: 100%; top: 0;">
+              <a href="folder/times-new-roman/index.html" target="_blank">Times New Roman</a>
+              <a href="folder/arial/index.html" target="_blank">Arial</a>
+              <a href="folder/helvetica/index.html" target="_blank">Helvetica</a>
+              <a href="folder/verdana/index.html" target="_blank">Verdana</a>
+              <a href="folder/calibri/index.html" target="_blank">Calibri</a>
+              <a href="folder/courier-new/index.html" target="_blank">Courier New</a>
+              <a href="folder/georgia/index.html" target="_blank">Georgia</a>
+              <a href="folder/tahoma/index.html" target="_blank">Tahoma</a>
+              <a href="folder/futura/index.html" target="_blank">Futura</a>
+              <a href="folder/garamond/index.html" target="_blank">Garamond</a>
+            </div>
+          </div>
         </div>
       </div>
       <a onclick="showSection('about')">ABOUT</a>
@@ -182,27 +205,21 @@
   </div>
 
   <div id="tugas" class="section">
-  <h1>PENGUMPULAN TUGAS</h1>
-  <h2>Hallo!!</h2>
-  <p>Selamat menyaksikan.</p>
+    <h1>PENGUMPULAN TUGAS</h1>
+    <h2>Hallo!!</h2>
+    <p>Selamat menyaksikan.</p>
 
-<h3>Video:</h3>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/KdhQ26H2yRo?si=0Y6PnNVMwH0RKzgF" 
-title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
-gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <h3>Video:</h3>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/KdhQ26H2yRo?si=0Y6PnNVMwH0RKzgF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<h3>Musik favorit:</h3>
-<iframe style="border-radius:12px" 
-src="https://open.spotify.com/embed/track/1UPB5rYJ0bzn6mNSoAHrZC?utm_source=generator" 
-width="100%" height="152" frameBorder="0" allowfullscreen="" 
-allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
-</iframe>
+    <h3>Musik favorit:</h3>
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1UPB5rYJ0bzn6mNSoAHrZC?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
 
-<p>
-  <a href="https://open.spotify.com/track/1UPB5rYJ0bzn6mNSoAHrZC" target="_blank" style="color: #660033; font-weight: bold;">
-    🎧 Klik di sini jika pemutar tidak muncul
-  </a>
-</p>
+    <p>
+      <a href="https://open.spotify.com/track/1UPB5rYJ0bzn6mNSoAHrZC" target="_blank" style="color: #660033; font-weight: bold;">
+        🎧 Klik di sini jika pemutar tidak muncul
+      </a>
+    </p>
   </div>
 
   <div id="about" class="section">
