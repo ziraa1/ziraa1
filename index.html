@@ -8,148 +8,264 @@
     body {
       margin: 0;
       font-family: "Poppins", Arial, sans-serif;
-      background-color: #0e2c26; /* Hijau tua */
-      color: #0e2c26;
+      background-color: #f5f8f6; /* putih kehijauan lembut */
+      color: #0e2c26; /* hijau tua */
     }
 
-    /* --- Navbar --- */
+    /* ===== NAVBAR ===== */
     nav {
       background-color: #ffffff;
       display: flex;
       justify-content: center;
       gap: 40px;
-      padding: 20px 0;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-      font-weight: 500;
+      padding: 18px 0;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     nav a {
       text-decoration: none;
       color: #0e2c26;
+      font-weight: 600;
       font-size: 1rem;
-      transition: color 0.3s;
+      transition: color 0.3s ease;
     }
 
     nav a:hover {
-      color: #2e8b57; /* hijau lembut */
+      color: #2e8b57;
     }
 
-    /* --- Hero Section --- */
-    .hero {
+    /* ===== SECTIONS ===== */
+    .section {
+      display: none;
+      padding: 70px 20px;
+      text-align: center;
+      min-height: 100vh;
+    }
+
+    .active {
+      display: block;
+    }
+
+    /* ===== HOME SECTION ===== */
+    #home {
+      background-color: #ffffff;
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
-      text-align: center;
-      height: 90vh;
-      background-color: #f9faf9; /* putih lembut */
-      border-radius: 0 0 40px 40px;
-      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-      padding: 0 20px;
+      align-items: center;
+      border-bottom: 5px solid #2e8b57;
     }
 
-    .hero h1 {
+    #home h1 {
       font-size: 3rem;
       color: #0e2c26;
       margin-bottom: 0.5rem;
     }
 
-    .hero h2 {
-      font-size: 1.3rem;
+    #home h2 {
       color: #2e8b57;
-      margin-bottom: 30px;
+      font-weight: 500;
+      margin-bottom: 40px;
     }
 
-    /* --- Search Bar --- */
-    .search-container {
+    .search-box {
       display: flex;
       align-items: center;
-      background-color: #fff;
-      border-radius: 25px;
-      overflow: hidden;
-      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+      justify-content: center;
+      background-color: #f2f7f3;
+      border-radius: 30px;
+      padding: 5px;
       width: 320px;
       max-width: 90%;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       margin-bottom: 30px;
     }
 
-    .search-container input {
+    .search-box input {
       flex: 1;
       padding: 10px 15px;
       border: none;
       outline: none;
+      background: transparent;
       font-size: 1rem;
+      color: #0e2c26;
     }
 
-    .search-container button {
-      background-color: #0e2c26;
-      color: #fff;
+    .search-box button {
+      background-color: #2e8b57;
       border: none;
+      color: white;
       padding: 10px 20px;
+      border-radius: 25px;
       cursor: pointer;
-      font-weight: 500;
       transition: background 0.3s;
     }
 
-    .search-container button:hover {
-      background-color: #2e8b57;
+    .search-box button:hover {
+      background-color: #0e2c26;
     }
 
-    /* --- Description --- */
-    .description {
+    .intro-text {
       max-width: 600px;
-      color: #0e2c26;
       line-height: 1.6;
-      font-size: 0.95rem;
-      margin-bottom: 30px;
+      font-size: 1rem;
+      color: #333;
     }
 
-    /* --- Footer --- */
-    footer {
+    /* ===== TUGAS ===== */
+    #tugas {
+      background-color: #f5f8f6;
+      overflow-y: auto;
+      max-height: 100vh;
+    }
+
+    #tugas h1 {
+      color: #0e2c26;
+    }
+
+    .font-grid {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .font-row {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .font-folder {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 20px;
+      width: 180px;
+      background-color: #ffffff;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
       text-align: center;
-      color: #ffffff;
+      transition: transform 0.3s;
+    }
+
+    .font-folder:hover {
+      transform: scale(1.05);
+    }
+
+    /* ===== ABOUT ===== */
+    #about {
+      background-color: #ffffff;
+    }
+
+    #about p {
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+
+    /* ===== CONTACT ===== */
+    #contact {
+      background-color: #f5f8f6;
+    }
+
+    #contact a {
+      color: #2e8b57;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    #contact a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background-color: #0e2c26;
+      color: #fff;
+      text-align: center;
       padding: 20px;
       font-size: 0.9rem;
+      margin-top: 40px;
     }
 
-    footer a {
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: 500;
-    }
-
-    footer a:hover {
-      color: #aef1c4;
-    }
   </style>
 </head>
 <body>
 
   <nav>
-    <a href="#">Menu</a>
-    <a href="#">Profil</a>
-    <a href="#">Blog</a>
-    <a href="#">Shop</a>
+    <a onclick="showSection('home')">Home</a>
+    <a onclick="showSection('tugas')">Tugas</a>
+    <a onclick="showSection('about')">About</a>
+    <a onclick="showSection('contact')">Contact</a>
   </nav>
 
-  <section class="hero">
+  <div id="home" class="section active">
     <h1>Welcome</h1>
     <h2>To My Website</h2>
 
-    <div class="search-container">
-      <input type="text" placeholder="Cari sesuatu..." />
+    <div class="search-box">
+      <input type="text" placeholder="Cari sesuatu di sini..." />
       <button>Cari</button>
     </div>
 
-    <p class="description">
-      Selamat datang di Website Zira. Tempat di mana kreativitas dan teknologi berpadu untuk menciptakan sesuatu yang bermakna.  
-      Jelajahi halaman ini untuk mengenal lebih jauh karya dan aktivitas saya.
+    <p class="intro-text">
+      Halo! Selamat datang di website pribadi saya.  
+      Tempat saya berbagi tugas, pengalaman, dan karya di dunia teknologi informasi.  
+      Silakan jelajahi setiap halaman dan temukan sesuatu yang menarik!
     </p>
+  </div>
 
-    <footer>
-      <p>© 2025 Website Zira | <a href="mailto:snazira818@gmail.com">Hubungi Saya</a></p>
-    </footer>
-  </section>
+  <div id="tugas" class="section">
+    <h1>PENGUMPULAN TUGAS</h1>
+    <h3>Kumpulan Font</h3>
+
+    <div class="font-grid">
+      <div class="font-row">
+        <div class="font-folder" style="font-family: 'Times New Roman', serif;"><h3>Times New Roman</h3><p>Contoh teks</p></div>
+        <div class="font-folder" style="font-family: Arial, sans-serif;"><h3>Arial</h3><p>Contoh teks</p></div>
+        <div class="font-folder" style="font-family: Helvetica, sans-serif;"><h3>Helvetica</h3><p>Contoh teks</p></div>
+        <div class="font-folder" style="font-family: Verdana, sans-serif;"><h3>Verdana</h3><p>Contoh teks</p></div>
+        <div class="font-folder" style="font-family: Calibri, sans-serif;"><h3>Calibri</h3><p>Contoh teks</p></div>
+      </div>
+      <div class="font-row">
+        <div class="font-folder" style="font-family: 'Courier New', monospace;"><h3>Courier New</h3><p>Contoh teks</p></div>
+        <div class="font-folder" style="font-family: Georgia, serif;"><h3>Georgia</h3><p>Contoh teks</p></div>
+        <div class="font-folder" style="font-family: Tahoma, sans-serif;"><h3>Tahoma</h3><p>Contoh teks</p></div>
+        <div class="font-folder" style="font-family: Futura, sans-serif;"><h3>Futura</h3><p>Contoh teks</p></div>
+        <div class="font-folder" style="font-family: Garamond, serif;"><h3>Garamond</h3><p>Contoh teks</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="about" class="section">
+    <h1>Tentang Saya</h1>
+    <p>Halo, saya <b>Siti Nazira</b>, mahasiswa semester 2 di Jurusan Teknik Informatika Universitas Riau.  
+    Saya memiliki ketertarikan besar dalam bidang teknologi, desain, dan komunikasi digital.  
+    Website ini menjadi wadah untuk belajar, berbagi, dan mengembangkan kreativitas.</p>
+  </div>
+
+  <div id="contact" class="section">
+    <h1>Hubungi Saya</h1>
+    <p>Email: <a href="mailto:snazira818@gmail.com">snazira818@gmail.com</a></p>
+    <p>Instagram: <a href="https://www.instagram.com/_nzyraa" target="_blank">@_nzyraa</a></p>
+    <p>WhatsApp: <a href="https://wa.me/6281234567890" target="_blank">+62 812-3456-7890</a></p>
+  </div>
+
+  <footer>
+    © 2025 Website Zira | Semua hak cipta dilindungi
+  </footer>
+
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('.section');
+      sections.forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+  </script>
 
 </body>
 </html>
